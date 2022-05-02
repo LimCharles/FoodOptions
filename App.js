@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import PageNav from "./src/components/PageNav";
+import * as eva from "@eva-design/eva";
+import { ApplicationProvider, IconRegistry } from "@ui-kitten/components";
+import { StatusBar, LayoutAnimation, UIManager } from "react-native";
+import MaterialIconsPack from "./src/util/MaterialIconsPack";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+if (
+  Platform.OS === "android" &&
+  UIManager.setLayoutAnimationEnabledExperimental
+) {
+  UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const App = () => {
+  return (
+    <>
+      <IconRegistry icons={MaterialIconsPack} />
+      <ApplicationProvider {...eva} theme={eva.light}>
+        <StatusBar hidden />
+        <PageNav />
+      </ApplicationProvider>
+    </>
+  );
+};
+
+export default App;
