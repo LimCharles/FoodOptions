@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, Pressable } from "react-native";
 
-const Button = (props) => {
+const CircleButton = (props) => {
   const { onPress, title = "Save" } = props;
   return (
     <Pressable
@@ -10,7 +10,7 @@ const Button = (props) => {
           alignItems: "center",
           justifyContent: "center",
           paddingVertical: 12,
-          paddingHorizontal: 20,
+          paddingHorizontal: 12,
           borderRadius: 4,
           elevation: 3,
           backgroundColor: "black",
@@ -37,4 +37,4 @@ const Button = (props) => {
   );
 };
 
-export default Button;
+export default CircleButton;

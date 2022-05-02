@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout, Text } from "@ui-kitten/components";
 import Button from "../../../components/Button";
-import { ImageBackground, View } from "react-native";
+import { ImageBackground, View, Dimensions } from "react-native";
 
 const RecipeCard = ({ recipeImg, label, foodDescription }) => {
   return (
@@ -10,8 +10,8 @@ const RecipeCard = ({ recipeImg, label, foodDescription }) => {
         uri: "https://reactnative.dev/img/tiny_logo.png",
       }}
       style={{
-        width: "100%",
-        height: 350,
+        width: Dimensions.get("window").width - 50,
+        height: Dimensions.get("window").width - 50,
         display: "flex",
         justifyContent: "flex-end",
       }}

@@ -12,7 +12,7 @@ const SearchBar = () => {
         backgroundColor: "#5EA629",
         borderRadius: 30,
         borderWidth: 0,
-        paddingBottom: 19,
+        paddingBottom: 25,
       }}
       textStyle={{
         color: "white",

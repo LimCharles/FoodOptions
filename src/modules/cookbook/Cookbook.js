@@ -4,12 +4,6 @@ import SearchBar from "./components/SearchBar";
 import { ScrollView } from "react-native";
 import RecipeCard from "./components/RecipeCard";
 
-const Row = ({ children }) => (
-  <Layout style={{ display: "flex", flexDirection: "row", paddingBottom: 20 }}>
-    {children}
-  </Layout>
-);
-
 const Cookbook = () => {
   return (
     <Layout
@@ -23,25 +17,25 @@ const Cookbook = () => {
         style={{
           display: "flex",
           width: "100%",
-          paddingLeft: 20,
-          paddingRight: 20,
+          paddingLeft: 25,
+          paddingRight: 25,
           paddingTop: 19,
         }}
       >
         <SearchBar />
 
-        <Row>
+        <Layout style={{ paddingBottom: 30 }}>
           <RecipeCard
             label="Bryan's Chicken Fritters"
             foodDescription="Delicious and Mexican"
           />
-        </Row>
-        <Row>
+        </Layout>
+        <Layout style={{ paddingBottom: 40 }}>
           <RecipeCard
             label="Bryan's Chicken Fritters"
             foodDescription="Delicious and Mexican"
           />
-        </Row>
+        </Layout>
       </ScrollView>
     </Layout>
   );
